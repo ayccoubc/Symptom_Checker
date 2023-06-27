@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Symptom Checker</title>
+</head>
+<body>
+    <h1>Symptom Checker</h1>
+    <form method="POST">
+        <h3>Select your symptoms:</h3>
+        {% for condition, data in symptoms.items() %}
+            <h4>{{ condition }}</h4>
+            {% for symptom in data['Symptoms'] %}
+                <input type="checkbox" name="symptoms" value="{{ symptom }}"> {{ symptom }}<br>
+            {% endfor %}
+        {% endfor %}
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Symptom Checker</title>
+</head>
+<body>
+    <h1>Possible Conditions</h1>
+    <p>Based on your symptoms, the following condition(s) is/are possible:</p>
+    <ul>
+        {% for condition in conditions %}
+            <li>{{ condition }}</li>
+        {% endfor %}
+    </ul>
+    <p>Please select the condition you want to explore further:</p>
+    <form method="POST">
+        <select name="condition">
+            <option value="">Select a condition</option>
+            {% for condition in conditions %}
+                <option value="{{ condition }}">{{ condition }}</option>
+            {% endfor %}
+        </select>
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

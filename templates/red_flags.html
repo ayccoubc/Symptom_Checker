@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Symptom Checker</title>
+</head>
+<body>
+    <h1>Red Flags</h1>
+    <p>The following red flags are associated with the selected condition:</p>
+    <ul>
+        {% for flag in red_flags %}
+            <li>{{ flag }}</li>
+        {% endfor %}
+    </ul>
+    
+</body>
+</html>
