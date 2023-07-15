@@ -1,10 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Symptom Checker</title>
-</head>
-<body>
-    <h1>Possible Conditions</h1>
+{% extends "base.html" %}
+
+{% block title %}Possible Conditions{% endblock %}
+
+{% block content %}
     <p>Based on your symptoms, the following condition(s) is/are possible:</p>
     <ul>
         {% for condition in conditions %}
@@ -22,5 +20,4 @@
         <br><br>
         <input type="submit" value="Submit">
     </form>
-</body>
-</html>
+{% endblock %}
